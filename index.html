@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dartboard SVG</title>
+    <style>
+      :root {
+        color-scheme: dark light;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: radial-gradient(circle at center, #1c1c1c, #0a0a0a);
+        font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      }
+      .frame {
+        max-width: min(90vw, 600px);
+        padding: 24px;
+      }
+      svg {
+        width: 100%;
+        height: auto;
+        display: block;
+        filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.45));
+        border-radius: 50%;
+        background: radial-gradient(circle at 50% 50%, #101010, #050505);
+      }
+      text {
+        font-size: 36px;
+        fill: #f4f4f4;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-anchor: middle;
+        dominant-baseline: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="frame">
+      <svg
+        viewBox="-260 -260 520 520"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-labelledby="title desc"
+        role="img"
+      >
+        <title id="title">Traditional Dartboard</title>
+        <desc id="desc">
+          A highly detailed dartboard with double and treble rings, standard
+          colors, and numbered outer ring.
+        </desc>
+
+        <!-- Board base -->
+        <circle r="250" fill="#242424" />
+        <circle r="248" fill="#000" />
+
+        <defs>
+          <path
+            id="single-segment"
+            d="M0,0 L-37.544272,-237.045202 A240,240 0 0,1 37.544272,-237.045202 Z"
+          />
+          <path
+            id="double-segment"
+            d="M-33.164107,-209.389928 A212,212 0 0,1 33.164107,-209.389928 L36.292796,-229.143695 A232,232 0 0,0 -36.292796,-229.143695 Z"
+          />
+          <path
+            id="triple-segment"
+            d="M-20.649349,-130.374861 A132,132 0 0,1 20.649349,-130.374861 L23.778039,-150.128628 A152,152 0 0,0 -23.778039,-150.128628 Z"
+          />
+          <g id="wedge-dark">
+            <use href="#single-segment" fill="#1a1a1a" />
+            <use href="#double-segment" fill="#b80f1a" />
+            <use href="#triple-segment" fill="#b80f1a" />
+          </g>
+          <g id="wedge-light">
+            <use href="#single-segment" fill="#f8f8f8" />
+            <use href="#double-segment" fill="#0f6b1b" />
+            <use href="#triple-segment" fill="#0f6b1b" />
+          </g>
+        </defs>
+
+        <!-- Wedges -->
+        <g>
+          <g transform="rotate(0)"><use href="#wedge-dark" /></g>
+          <g transform="rotate(18)"><use href="#wedge-light" /></g>
+          <g transform="rotate(36)"><use href="#wedge-dark" /></g>
+          <g transform="rotate(54)"><use href="#wedge-light" /></g>
+          <g transform="rotate(72)"><use href="#wedge-dark" /></g>
+          <g transform="rotate(90)"><use href="#wedge-light" /></g>
+          <g transform="rotate(108)"><use href="#wedge-dark" /></g>
+          <g transform="rotate(126)"><use href="#wedge-light" /></g>
+          <g transform="rotate(144)"><use href="#wedge-dark" /></g>
+          <g transform="rotate(162)"><use href="#wedge-light" /></g>
+          <g transform="rotate(180)"><use href="#wedge-dark" /></g>
+          <g transform="rotate(198)"><use href="#wedge-light" /></g>
+          <g transform="rotate(216)"><use href="#wedge-dark" /></g>
+          <g transform="rotate(234)"><use href="#wedge-light" /></g>
+          <g transform="rotate(252)"><use href="#wedge-dark" /></g>
+          <g transform="rotate(270)"><use href="#wedge-light" /></g>
+          <g transform="rotate(288)"><use href="#wedge-dark" /></g>
+          <g transform="rotate(306)"><use href="#wedge-light" /></g>
+          <g transform="rotate(324)"><use href="#wedge-dark" /></g>
+          <g transform="rotate(342)"><use href="#wedge-light" /></g>
+        </g>
+
+        <!-- Bulls -->
+        <circle r="32" fill="#0f6b1b" />
+        <circle r="16" fill="#b80f1a" />
+
+        <!-- Separators -->
+        <g stroke="#1b1b1b" stroke-width="2">
+          <circle r="232" fill="none" />
+          <circle r="152" fill="none" />
+          <circle r="132" fill="none" />
+          <circle r="100" fill="none" />
+        </g>
+
+        <!-- Radial separators -->
+        <g stroke="#1b1b1b" stroke-width="2">
+          <!-- 20 lines -->
+          <line x1="0" y1="0" x2="0" y2="-240" />
+          <line x1="0" y1="0" x2="0" y2="-240" transform="rotate(18)" />
+          <line x1="0" y1="0" x2="0" y2="-240" transform="rotate(36)" />
+          <line x1="0" y1="0" x2="0" y2="-240" transform="rotate(54)" />
+          <line x1="0" y1="0" x2="0" y2="-240" transform="rotate(72)" />
+          <line x1="0" y1="0" x2="0" y2="-240" transform="rotate(90)" />
+          <line x1="0" y1="0" x2="0" y2="-240" transform="rotate(108)" />
+          <line x1="0" y1="0" x2="0" y2="-240" transform="rotate(126)" />
+          <line x1="0" y1="0" x2="0" y2="-240" transform="rotate(144)" />
+          <line x1="0" y1="0" x2="0" y2="-240" transform="rotate(162)" />
+          <line x1="0" y1="0" x2="0" y2="-240" transform="rotate(180)" />
+          <line x1="0" y1="0" x2="0" y2="-240" transform="rotate(198)" />
+          <line x1="0" y1="0" x2="0" y2="-240" transform="rotate(216)" />
+          <line x1="0" y1="0" x2="0" y2="-240" transform="rotate(234)" />
+          <line x1="0" y1="0" x2="0" y2="-240" transform="rotate(252)" />
+          <line x1="0" y1="0" x2="0" y2="-240" transform="rotate(270)" />
+          <line x1="0" y1="0" x2="0" y2="-240" transform="rotate(288)" />
+          <line x1="0" y1="0" x2="0" y2="-240" transform="rotate(306)" />
+          <line x1="0" y1="0" x2="0" y2="-240" transform="rotate(324)" />
+          <line x1="0" y1="0" x2="0" y2="-240" transform="rotate(342)" />
+        </g>
+
+        <!-- Outer double ring -->
+        <circle r="236" fill="none" stroke="#191919" stroke-width="8" />
+
+        <!-- Number ring -->
+        <g>
+          <circle r="248" fill="none" stroke="#fffbf0" stroke-width="6" />
+          <circle r="262" fill="none" stroke="#5a3b16" stroke-width="20" />
+        </g>
+
+        <!-- Numbers around the ring in standard dartboard order -->
+        <g fill="#f8f6f0" font-size="34" font-weight="600">
+          <!-- Standard order: 20 1 18 4 13 6 10 15 2 17 3 19 7 16 8 11 14 9 12 5 -->
+          <g transform="rotate(0)"><text y="-246">20</text></g>
+          <g transform="rotate(18)"><text y="-246" transform="rotate(-18)">1</text></g>
+          <g transform="rotate(36)"><text y="-246" transform="rotate(-36)">18</text></g>
+          <g transform="rotate(54)"><text y="-246" transform="rotate(-54)">4</text></g>
+          <g transform="rotate(72)"><text y="-246" transform="rotate(-72)">13</text></g>
+          <g transform="rotate(90)"><text y="-246" transform="rotate(-90)">6</text></g>
+          <g transform="rotate(108)"><text y="-246" transform="rotate(-108)">10</text></g>
+          <g transform="rotate(126)"><text y="-246" transform="rotate(-126)">15</text></g>
+          <g transform="rotate(144)"><text y="-246" transform="rotate(-144)">2</text></g>
+          <g transform="rotate(162)"><text y="-246" transform="rotate(-162)">17</text></g>
+          <g transform="rotate(180)"><text y="-246" transform="rotate(-180)">3</text></g>
+          <g transform="rotate(198)"><text y="-246" transform="rotate(-198)">19</text></g>
+          <g transform="rotate(216)"><text y="-246" transform="rotate(-216)">7</text></g>
+          <g transform="rotate(234)"><text y="-246" transform="rotate(-234)">16</text></g>
+          <g transform="rotate(252)"><text y="-246" transform="rotate(-252)">8</text></g>
+          <g transform="rotate(270)"><text y="-246" transform="rotate(-270)">11</text></g>
+          <g transform="rotate(288)"><text y="-246" transform="rotate(-288)">14</text></g>
+          <g transform="rotate(306)"><text y="-246" transform="rotate(-306)">9</text></g>
+          <g transform="rotate(324)"><text y="-246" transform="rotate(-324)">12</text></g>
+          <g transform="rotate(342)"><text y="-246" transform="rotate(-342)">5</text></g>
+        </g>
+      </svg>
+    </div>
+  </body>
+</html>
